@@ -1,0 +1,430 @@
+/*
+Theme Name: Ctablock
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.flag_ua {
+    background-image: url(./assets/img/flag_ua.svg);
+    background-size: cover;
+    display: block;
+    width: 18px;
+    height: 14px
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctablock {
+    display: flex;
+    background: #ebf5ef;
+    max-width: 1240px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 90px;
+}
+
+.ctablock__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ctablock__content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+}
+
+.ctablock__content > img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: -67%;
+    z-index: 1;
+}
+
+.ctablock__content > p {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 130%;
+    color: #212227;
+    max-width: 610px;
+    width: 100%;
+    z-index: 2;
+}
+
+.ctablock__form {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #E7E2F4;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+}
+.ctablock__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+}
+.ctablock__form form p {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 119%;
+    text-align: center;
+    color: #212227;
+    margin-bottom: 18px;
+}
+.ctablock__form .ctablock__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap {
+    position: relative;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    padding-left: 6px;
+    width: 95px;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul.active {
+    background-color: #fff;
+}
+
+.flag {
+    display: none;
+}
+
+.flag:hover {
+    cursor: pointer;
+    background-color: #ecebeb;
+    border-radius: 5px;
+}
+
+.flag::before {
+    content: '';
+    background-size: cover;
+    display: block;
+    width: 18px;
+    height: 14px;
+    margin-top: 2px;
+}
+
+.flag__ua::before {
+    background-image: url(./assets/img/flag_ua.svg);
+}
+
+.flag__pl::before {
+    background-image: url(./assets/img/poland.svg);
+}
+
+.flag__bl::before {
+    background-image: url(./assets/img/belgium.svg);
+}
+
+.flag__cz::before {
+    background-image: url(./assets/img/czechia.svg);
+}
+
+.flag__fr::before {
+    background-image: url(./assets/img/france.svg);
+}
+
+.flag__active {
+    display: flex;
+    gap: 20px;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul li:afrer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 12px;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul.ctablock__countries_active{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 6px;
+    padding-left: 6px;
+    margin-top: 10px;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    box-shadow: 0px -1px 9px 0px #f0e3e3;
+    border-radius: 5px;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul.ctablock__countries::after{
+    content: "";
+    background-image: url(./assets/img/arrow.svg);
+    height: 8px;
+    width: 8px;
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 6px;
+    background-size: 8px;
+    background-position-y: 1px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul.ctablock__countries_active::after {
+    display: none;
+}
+
+.ctablock__form .ctablock__item .ctablock__wrap ul.ctablock__countries_active li{
+    display: flex;
+    gap: 20px;
+}
+
+
+/* .ctablock__form .ctablock__item .ctablock__wrap ul.ctablock__countries .flag span{
+    display: none;
+} */
+
+.ctablock__form .ctablock__item .ctablock__wrap ul.ctablock__countries_active .flag span{
+    display: block;
+}
+
+.ctablock__form .ctablock__item label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #212227;
+}
+
+.ctablock__form .ctablock__item input,
+.ctablock__form .ctablock__item textarea {
+    padding: 14px 18px 11px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    color: #8a8e91;
+    border: 1px solid #8a8e91;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.ctablock__form .ctablock__item input[type=tel] {
+    padding: 14px 18px 11px 110px;
+}
+ 
+.ctablock__form .ctablock__item > span {
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 150%;
+    color: #c42c17;
+    display: none;
+}
+
+.ctablock__form .ctablock__item input::placeholder {
+    color: #8a8e91;
+}
+
+.ctablock__form .ctablock__item textarea {
+    padding: 16px 18px;
+    margin: 8px 0px 10px;
+    height: 125px;
+    overflow: auto;
+}
+
+.ctablock__form .ctablock__item button {
+    border: none;
+    border-radius: 8px;
+    padding: 20px 40px;
+    background: #f2512e;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: #f4f1ff;
+    cursor: pointer;
+    height: 61px;
+}
+
+.ctablock__form .ctablock__item button:hover {
+    transition: .3s color;
+    background: #b43418;
+}
+
+.ctablock__form > p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    color: #27252f;
+    max-width: 205px;
+    width: 100%;
+    margin: 15px auto 0;
+}
+
+.ctablock__form > p > a {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.error_border {
+    border-color: red !important;
+}
+
+.error_validate {
+    display: block !important;
+}
+
+/* .loader {
+    border-top: 8px solid blue;
+    border-bottom: 8px solid blue;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+    background-color: #E8FB87;
+  } */
+
+/* .unsubmit {
+    background-color: gray;
+    cursor: no-drop;
+} */
+
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 72%;
+    left: 55%;
+    margin: -25px 0 0 -25px;
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+    
+.spinner .path {
+    stroke: #E8FB87;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }  
+
+.btn {
+    position: relative;
+}
+
+.spinner_active {
+    display: block;
+}
+
+.popup {
+    display: none;
+    background: #ebf5ef;
+    max-width: 1240px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 90px;
+    justify-content: center;
+    align-items: center;
+    height: 860px;
+}
+
+.popup__wrapper {
+    width: 552px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 20px 22px;
+    border-radius: 16px;
+}
+
+.popup__wrapper > p {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 124%;
+    text-align: center;
+    color: #13121e;
+    margin-bottom: 58px;
+}
+
+.popup__wrapper > span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #13121e;
+    margin-bottom: 30px;
+}
+
+.popup__wrapper > .popup__close {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    color: #6f6f72;
+    text-align: right;
+    cursor: pointer;
+    margin: 0 0 17px auto;
+    display: flex;
+}
+
+.popup__wrapper .popup__close::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url(./assets/img/cross.svg);
+    display: block;
+    margin-left: 10px;
+}
+
+.popup__wrapper > img {
+    width: 62px;
+    height: 62px;
+    margin: auto auto 10px;
+}
