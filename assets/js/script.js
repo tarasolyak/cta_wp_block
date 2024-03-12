@@ -1,4 +1,3 @@
-
 function sendForm() {
     const form = document.querySelector("form")
     const name_field = document.querySelector(".ctablock__item_name")
@@ -146,6 +145,8 @@ function sendForm() {
             const res = await fetch(ajaxurl.ajax_url, body)
 
             const data = await res.json();
+			
+			console.log(data)
 
             if (!res.ok || data.status === "error") {
                 if (data.error_name_field == true) {
@@ -158,6 +159,13 @@ function sendForm() {
                     name__error.textContent = "Помилка валідації. Спробуйте ще раз";
                 } 
                 
+				button_name.style.display = "block";
+                spinner.classList.remove('spinner_active')
+                btn.removeAttribute("disabled")
+                button_name.textContent = "Помилка! Спробуйте пізніше."
+				setTimeout(() => {
+                    button_name.textContent = "Надіслати"
+                }, 6000)
                 throw new Error(`HTTP error! status: ${res.status}`);
 
             } else {
